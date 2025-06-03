@@ -13,14 +13,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 关键词 摘要 首页脚注
 %%%%%%%%关键词
-\Keyword{电子自旋共振，铁磁共振，微波技术，扫场，朗德因子}
+\Keyword{电子自旋共振，铁磁共振，微波技术，扫场，朗德g因子}
 \twocolumn[
 \begin{@twocolumnfalse}
 \maketitle
 
 %%%%%%%%摘要
 \begin{empAbstract}
-本实验利用微波共振系统研究了电子自旋共振(ESR)和铁磁共振(FMR)现象。通过反射式谐振腔观测DPPH样品的ESR信号，测量朗德因子$g = 2.003 \pm 0.002$；使用传输式谐振腔研究铁氧体材料的FMR特性，采用高斯函数和Breit-Wigner函数拟合$P$-$B$曲线，测得共振线宽$\Delta B = 15.2 \pm 0.5$ mT。实验验证了扫场技术在ESR观测中的必要性，分析了FMR实验中禁用扫场的原因。结果表明微波磁共振技术是研究材料磁特性的有效手段。
+
 \end{empAbstract}
 
 %%%%%%%%英文标题、作者、摘要、关键词
@@ -29,7 +29,7 @@
 \KeywordEn{Electron spin resonance, Ferromagnetic resonance, Microwave technology, Sweep field, Landé g-factor}
 
 \begin{empAbstractEn}
-This experiment investigates electron spin resonance (ESR) and ferromagnetic resonance (FMR) phenomena using a microwave resonance system. The ESR signal of DPPH sample was observed via a reflective cavity, yielding a Landé g-factor of $g = 2.003 \pm 0.002$. The FMR characteristics of ferrite material were studied using a transmission cavity, with Gaussian and Breit-Wigner functions applied to fit the $P$-$B$ curve, giving a resonance linewidth of $\Delta B = 15.2 \pm 0.5$ mT. The necessity of sweep field in ESR observation was verified, and the reason for prohibiting sweep field in FMR experiments was analyzed. Results demonstrate microwave magnetic resonance as an effective technique for material characterization.
+
 \end{empAbstractEn}
 
 %%%%%%%%首页角注
@@ -44,184 +44,122 @@ This experiment investigates electron spin resonance (ESR) and ferromagnetic res
 
 \section{引言}
 \enlargethispage{-3.3cm}
-电子自旋共振(ESR)和铁磁共振(FMR)是研究材料磁性质的重要技术。ESR由扎伏伊斯基于1944年首次观测到\cite{esr_origin}，通过探测未成对电子与微波磁场的相互作用，可获得材料的$g$因子、弛豫时间等关键参数。铁磁共振则研究铁磁材料中磁矩的集体进动行为\cite{fmr_theory}，对微波器件设计具有重要意义。
-
-微波频段(8-12 GHz)的磁共振实验需采用波导传输系统和谐振腔技术。本实验利用BJ-100波导系统，通过反射式谐振腔观测DPPH的ESR现象，并使用传输式谐振腔研究多晶铁氧体的FMR特性。重点探究扫场技术的原理及其在不同磁共振实验中的应用差异。
-
-\section{实验原理}
+\section{实验内容}
 
 \subsection{电子自旋共振}
-当磁矩不为零的顺磁材料置于静磁场$B_0$中时，电子能级发生塞曼分裂：
-\begin{equation}
-\Delta E = g\mu_B B_0
-\end{equation}
-其中$g$为朗德因子，$\mu_B$为玻尔磁子。施加垂直交变磁场$B_1$，当微波频率满足共振条件：
-\begin{equation}
-h\nu = g\mu_B B_0
-\end{equation}
-时发生共振吸收。对于DPPH自由基($\mathrm{(C_6H_5)_2N-NC_6H_2(NO_2)_3}$)，其未成对电子导致$g \approx 2.00$。
 
-\subsection{铁磁共振}
-铁磁材料中存在强耦合的自旋系统，共振条件为：
+\subsubsection{电子自旋共振的描述}
+
+当具有未成对电子的物质置于外加磁场中时，电子自旋会与磁场相互作用，导致能级分裂。能级分裂宽度$\Delta E$与外加磁场强度$B$以及电子磁矩$\mu$有关，满足关系式：
+
 \begin{equation}
-\omega = \gamma B_0 = \frac{g\mu_B}{\hbar} B_0
-\end{equation}
-其中$\gamma$为旋磁比。铁磁共振线宽$\Delta B$与弛豫时间$\tau$相关：
-\begin{equation}
-\tau = \frac{2}{\gamma \Delta B}
+\Delta E = \mu B
 \end{equation}
 
-\subsection{扫场技术原理}
-扫场是在静磁场上叠加低频交变磁场$B_{\mathrm{sweep}}$（图\ref{fig:sweep_field}），使系统周期性通过共振点。必要性在于：
-\begin{itemize}
-    \item ESR信号微弱（$\Delta n/n \sim 10^{-6}$），直接观测困难
-    \item 扫场使共振条件周期性满足，产生可观测的交变信号
-    \item 配合相敏检测可显著提高信噪比
-\end{itemize}
+其中电子磁矩可以进一步用Bohr磁子$\mu_B = \frac{e\hbar}{2m_e}$和Landé g因子$g$表示为：
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{sweep_field.pdf}
-    \caption{扫场技术原理：(a)静态磁场下的能级分裂 (b)扫场作用下的周期性共振}
-    \label{fig:sweep_field}
-\end{figure}
+\begin{equation}
+\mu = g \mu_B
+\end{equation}
 
-\subsection{波导与谐振腔}
-采用BJ-100矩形波导($a=22.86$ mm, $b=10.16$ mm)，传输$TE_{10}$模微波。反射式谐振腔用于ESR研究，传输式谐振腔用于FMR实验。样品置于磁场最大处($x=a/2$)，电场最小处。
+在电磁波作用下，当电磁波频率$\nu$与能级分裂频率相等时，电子自旋会发生共振跃迁，对电磁波的吸收达到极大，满足关系式：
 
-\section{实验装置与方法}
-实验系统如图\ref{fig:experimental_setup}所示，核心组件包括：
+\begin{equation}
+h \nu  = \Delta E = g \mu_B B
+\end{equation}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.95\linewidth]{experimental_setup.pdf}
-    \caption{微波磁共振实验系统示意图}
-    \label{fig:experimental_setup}
-\end{figure}
+在电子由低能态跃迁至高能态后，通过与晶格以及周围电子的相互作用，系统回到低能态，伴随各向电磁波辐射，此过程称为弛豫。由于弛豫作用的存在，即使是在共振条件完全满足时，稳态下仍然会有一定数量的电子处于低能态，因此能在实验上测量到一稳定的共振吸收。
 
-\begin{itemize}
-    \item \textbf{微波源}：体效应振荡器，8.6-9.6 GHz可调
-    \item \textbf{隔离器}：单向传输，防止反射波干扰源
-    \item \textbf{衰减器}：调节微波功率(0-20 dB)
-    \item \textbf{频率计}：谐振式频率计，精度0.01 GHz
-    \item \textbf{环行器}：实现信号定向传输
-    \item \textbf{谐振腔}：反射腔(ESR)/传输腔(FMR)
-    \item \textbf{检波器}：晶体检波，输出直流/交流信号
-\end{itemize}
+\subsubsection{测量系统与样品选择}
 
-\subsection{ESR实验步骤}
-\begin{enumerate}
-    \item 搭建反射式谐振腔系统，DPPH样品置于腔中心
-    \item 调节腔长使$f=9.27$ GHz时谐振（检波电流最小）
-    \item 施加扫场($f_{\mathrm{sweep}}=1$ kHz, $B_{\mathrm{sweep}}=2$ mT)
-    \item 改变静磁场$B_0$，示波器观测吸收信号
-    \item 测量共振磁场$B_{\mathrm{res}}$
-\end{enumerate}
+对于电子自旋共振，Landé g因子值接近于2；实验室中电磁铁一般可产生$0.1$\si{\tesla}~$1.0$\si\tesla 的磁场，对应于共振频率在数个\si{\giga\hertz}，因而为测量电子自旋共振信号，需要使用微波波段电磁波源，以及波导、谐振腔等微波器件。
 
-\subsection{FMR实验步骤}
-\begin{enumerate}
-    \item 搭建传输式谐振腔系统，铁氧体样品置于磁场最大处
-    \item \textcolor{red}{断开扫场电路}，避免磁场干扰
-    \item 逐点改变$B_0$，记录输出功率$P$
-    \item 测量$P$-$B$曲线
-    \item 使用ROOT软件进行曲线拟合
-\end{enumerate}
+在本次实验中，我们使用北京大华DH1121A型3\si{\centi\meter}固态信号源作为微波源，配合BJ-100型波导管等微波器件，以及岩崎（IWATSU）SS-7802A型模拟示波器，对电子自旋共振和铁磁共振现象进行研究。如图【】所示，样品置于谐振腔内，通过一电磁铁提供磁场；微波源输出的微波信号通过隔离期、衰减器、环行器传输至反射式谐振腔，并在与样品相互作用后，再通过环行器以及波导管传输至晶体检波器
+
+由于产生微波的元件本身频率调节有一定难度，在实验上通过常通过调节外加磁场，并观察微波功率吸收随之发生的变化，以吸收最大时对应的磁感应强度与微波源频率计算出Landé g因子。
+
+在稳定存在的物质中，难以找到孤电子。历史上曾通过X射线照射小分子有机物，引起部分分子电离，进而得到孤电子用于测量。在本次实验中，我们使用（1,1-二苯基-2-(1,4,6-三硝基苯基)肼自由基（1,1-Diphenyl-2-picrylhydrazyl radical, DPPH）作为实验材料：DPPH本身是一种相对稳定的自由基，其分子中含有一个未成对电子，能够产生较强的自旋共振信号。
+
+在本部分测量中，DPPH样品被置于反射式谐振腔内，其几何尺寸可调，以适应于不同频率的微波信号。
+
+在实验之初，需要选定适当微波源频率，并由此计算波导内波长$\lambda_g$，进而调整反射式谐振腔腔长，以及被测量样品的摆放位置。
+
+所使用波导管为BJ-100型矩形波导，其宽度$a=22.86\pm0.07$ \si{\milli\meter}，对应主模频率区间为$8.20 \approx 12.50$ \si{\giga\hertz}。
+
+综合微波源以及波导管特性，选取微波频率为$\nu  = 8.960 \pm 0.005$ \si{\giga\hertz}，设定输出后通过直读式，对应计算得到波长$\lambda$以及波导波长$\lambda_g$：
+
+\begin{equation}
+\lambda = \frac{c}{\nu} = 
+\end{equation}
+
+\begin{equation}
+\lambda_g = \frac{\lambda}{\sqrt{1 - \left(\frac{\lambda}{\2a}\right)^2}} = 
+\end{equation}
+
+在反射式谐振腔中，为使样品的自旋共振信号最大，应当使谐振腔内电磁场形成驻波，且样品应放置在腔内驻波磁感应强度幅值最大处。谐振腔长$L$，样品与谐振腔端面距离$d$和波导波长$\lambda_g$满足以下关系：
+
+\begin{equation}
+L = \frac{n}{2}\lambda_g \quad (n \in \mathbb{Z}^+)
+\end{equation}
+
+\begin{equation}
+d = \frac{(m)}{2}\lambda_g \quad (m \in \mathbb{Z})
+\end{equation}
+
+在本次实验中，选取谐振腔长$L=3\lambda_g\approx$，样品与谐振腔端面距离$d=\frac{3}{2}\lambda_g\approx$。为确认取到谐振腔内驻波磁感应强度幅值最大处，通过反复联合调节样品位置和谐振腔长度，观察，最终得到谐振腔内驻波磁感应强度幅值最大处的样品位置$d \approx 73.4 $\si{\milli\meter}。
+
+\subsubsection{借助扫场信号观察电子自旋共振信号}
+
+电子自旋共振频宽可能较窄，且晶体检波器-微安表系统对微波功率变化的响应较慢，因此在实验中借助磁共振实验仪的扫场功能，使用示波器确认共振发生所对应的中心频率：在一恒定励磁电流基础上，加一周期变化且幅值较小的周期信号，即“扫场信号”，由此样品电子自旋对磁感应强度变化的响应，会在时域上被展开成一个脉冲信号，显示在示波器上；调节励磁电流中心值$B$，直至这一脉冲信号中心落在示波器屏幕中心位置，此时$B_0$即满足样品电子自旋共振条件。
+
+在本实验中，扫场信号为一锯齿波，因而在一个扫描周期内，会在示波器上显示为两个脉冲信号：第一个脉冲信号对应于扫场信号上升段，第二个脉冲信号对应于扫场信号下降段。判定样品电子自旋共振条件时，实际取两脉冲信号中心值近似相等作为判据。
+
+\subsection{铁磁自旋共振}
+
+\subsubsection{铁磁自旋共振的描述}
+
+在铁磁体中，电子自旋方向之间存在显著关联，在外加适当频率交变磁场时，会相类似地表现出自旋共振现象，整体宏观磁化矢量发生进动，并伴有对对应频率电磁波能量的强烈吸收。
+
+在铁磁体系中，弛豫现象较之于电子自旋共振更为显著。为描述顺磁系统的宏观磁矩进动以及弛豫现象，通常使用Bloch方程描述宏观磁化矢量$\mathbf{M}$的时间演化：
+
+\begin{equation}
+\begin{align}
+    \frac{\d M_x}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_x - \frac{M_x}{T_2} \\
+    \frac{\d M_y}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_y - \frac{M_y}{T_2} \\
+    \frac{\d M_z}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_z - \frac{M_z - M_z^0}{T_1}
+\end{align}
+\end{equation}
+
+其中已选取坐标轴使得外加磁场$\mathbf{B}$沿$z$轴方向，$\mathbf{B'}$为外加的交变磁场$T_1$和$T_2$分别为纵向弛豫时间和横向弛豫时间，分别对应自旋-晶格相互作用和自旋-自旋相互作用。
+
+类似于电子自旋共振，铁磁自旋共振也会在外加磁场强度满足特定条件时发生共振跃迁，伴随对对应频率电磁波能量的强烈吸收。对于铁磁物质，这一吸收作用还可以通过交变磁场下整体复磁导率来描述：
+
+\begin{equation}
+    \mu^* = \mu' + i\mu''
+\end{equation}
+
+其中$\mu'$对应于其在稳定磁场下的磁导率，$\mu''$对应于交变磁能在铁磁体中耗散的部分。在发生铁磁自旋共振时，$\omega = \frac{g}\mu_B/\hbar B_0$，$\mu''$也会达到极大值，并且在此附近存在一定共振线宽$\Delta B$
 
 \section{实验结果与分析}
 
-\subsection{ESR实验结果}
-DPPH的ESR信号如图\ref{fig:esr_signal}所示，测得共振磁场$B_{\mathrm{res}} = 330.5$ mT。朗德因子计算：
+\subsection{电子Landé g因子计算}
+
+调节扫场幅度，观察到励磁电流为$I_0 = 1.821$\si\ampere 时，示波器上显示的两个脉冲信号中心位置相近，且幅值均较大。结合电磁体特性：$B = 0.0152 \text{\si\tesla} + 0.1632 \text{\si\tesla / \si\ampere} \cdot I$，得到此时样品电子自旋共振条件下的磁感应强度为$B_0 = 0.3123$ \si\tesla。给出g因子测量值：
+
 \begin{equation}
-g = \frac{h\nu}{\mu_B B_{\mathrm{res}}} = \frac{6.626\times10^{-34} \times 9.27\times10^9}{9.274\times10^{-24} \times 0.3305} = 2.003
+g = \frac{h \nu}{\mu_B B_0} = \frac{4\pi m_e}{e} = 
 \end{equation}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{esr_signal.pdf}
-    \caption{DPPH的ESR吸收信号(扫场频率1 kHz)}
-    \label{fig:esr_signal}
-\end{figure}
+进行不确定度分析：
 
-不确定度分析：
-\begin{equation}
-u_g = g \sqrt{ \left( \frac{u_\nu}{\nu} \right)^2 + \left( \frac{u_B}{B} \right)^2 } = 0.002
-\end{equation}
-最终结果：$g = 2.003 \pm 0.002$
+\subsection{不确定度分析}
 
-\subsection{扫场必要性验证}
-对比实验表明（表\ref{tab:sweep_comparison}），扫场技术显著改善ESR信号可观测性：
-\begin{table}[H]
-    \centering
-    \caption{扫场对ESR信号观测的影响}
-    \label{tab:sweep_comparison}
-    \begin{tabular}{ccc}
-        \toprule
-        条件 & 信号幅度 & 信噪比 \\
-        \midrule
-        无扫场 & <0.1 \si{\micro A} & \sim 1 \\
-        有扫场 & 2.5 \si{\micro A} & >20 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\subsection{FMR实验结果与分析}
-铁磁共振$P$-$B$曲线如图\ref{fig:fmr_curve}所示，分别用高斯函数和Breit-Wigner函数拟合：
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.95\linewidth]{fmr_fitting.pdf}
-    \caption{FMR的$P$-$B$曲线及两种函数拟合结果}
-    \label{fig:fmr_curve}
-\end{figure}
-
-拟合结果对比：
-\begin{table}[H]
-    \centering
-    \caption{不同拟合函数的FMR参数对比}
-    \label{tab:fit_comparison}
-    \begin{tabular}{lccc}
-        \toprule
-        拟合函数 & 共振磁场(mT) & 线宽(mT) & $\chi^2$/NDF \\
-        \midrule
-        高斯函数 & 321.5 $\pm$ 0.8 & 15.2 $\pm$ 0.5 & 1.32 \\
-        Breit-Wigner & 320.8 $\pm$ 1.2 & 16.1 $\pm$ 0.7 & 2.05 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-分析表明：
-\begin{itemize}
-    \item 高斯函数拟合优度($\chi^2$/NDF=1.32)优于Breit-Wigner(2.05)
-    \item 铁磁共振线宽$\Delta B = 15.2$ mT，对应弛豫时间$\tau = 2/(\gamma \Delta B) = 1.2$ ns
-    \item 铁氧体样品$g=2.12$，表明轨道磁矩贡献显著
-\end{itemize}
-
-\subsection{FMR禁用扫场原因分析}
-铁磁共振实验中禁用扫场（图\ref{fig:sweep_problem}），原因在于：
-\begin{enumerate}
-    \item \textbf{线宽较大}：FMR线宽(>10 mT)远大于ESR(<0.1 mT)，无需扫场即可观测
-    \item \textbf{磁滞效应}：铁磁材料磁化曲线存在迟滞，扫场导致$B$-$H$非线性响应
-    \item \textbf{功率测量需求}：$P$-$B$曲线需静态磁场逐点测量，扫场引入动态误差
-    \item \textbf{频散效应}：扫场使谐振腔失谐，影响功率测量精度
-\end{enumerate}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{sweep_problem.pdf}
-    \caption{扫场导致铁磁共振信号失真：(a)无扫场 (b)有扫场}
-    \label{fig:sweep_problem}
-\end{figure}
+提示：扫场
+提示：微波源频率随时间有所漂移，先测信号再测频率
 
 \section{结论}
-本实验通过微波技术研究了电子自旋共振和铁磁共振现象：
-\begin{itemize}
-    \item 测得DPPH的$g=2.003\pm0.002$，验证自由基的电子自旋特性
-    \item 铁磁共振线宽$\Delta B=15.2$ mT，反映铁氧体材料的磁损耗机制
-    \item 扫场技术对ESR观测至关重要，但导致FMR信号失真
-    \item 高斯函数拟合FMR数据优于Breit-Wigner函数($\Delta\chi^2=0.73$)
-\end{itemize}
 
-实验结果揭示了微波磁共振技术在材料表征中的独特优势。建议进一步研究温度对共振参数的影响，拓展在磁性材料设计中的应用。
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  参考文献
