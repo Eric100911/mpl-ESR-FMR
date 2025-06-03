@@ -56,7 +56,7 @@
 \Delta E = \mu B
 \end{equation}
 
-其中电子磁矩可以进一步用Bohr磁子$\mu_B = \frac{e\hbar}{2m_e}$和Landé g因子$g$表示为：
+其中电子磁矩可以进一步用Bohr磁子$\mu_B = \frac{e\hbar}{2m_e}$和朗德g因子$g$表示为：
 
 \begin{equation}
 \mu = g \mu_B
@@ -72,11 +72,11 @@ h \nu  = \Delta E = g \mu_B B
 
 \subsubsection{测量系统与样品选择}
 
-对于电子自旋共振，Landé g因子值接近于2；实验室中电磁铁一般可产生$0.1$\si{\tesla}~$1.0$\si\tesla 的磁场，对应于共振频率在数个\si{\giga\hertz}，因而为测量电子自旋共振信号，需要使用微波波段电磁波源，以及波导、谐振腔等微波器件。
+对于电子自旋共振，朗德g因子值接近于2；实验室中电磁铁一般可产生$0.1$\si{\tesla}~$1.0$\si\tesla 的磁场，对应于共振频率在数个\si{\giga\hertz}，因而为测量电子自旋共振信号，需要使用微波波段电磁波源，以及波导、谐振腔等微波器件。
 
 在本次实验中，我们使用北京大华DH1121A型3\si{\centi\meter}固态信号源作为微波源，配合BJ-100型波导管等微波器件，以及岩崎（IWATSU）SS-7802A型模拟示波器，对电子自旋共振和铁磁共振现象进行研究。如图【】所示，样品置于谐振腔内，通过一电磁铁提供磁场；微波源输出的微波信号通过隔离期、衰减器、环行器传输至反射式谐振腔，并在与样品相互作用后，再通过环行器以及波导管传输至晶体检波器
 
-由于产生微波的元件本身频率调节有一定难度，在实验上通过常通过调节外加磁场，并观察微波功率吸收随之发生的变化，以吸收最大时对应的磁感应强度与微波源频率计算出Landé g因子。
+由于产生微波的元件本身频率调节有一定难度，在实验上通过常通过调节外加磁场，并观察微波功率吸收随之发生的变化，以吸收最大时对应的磁感应强度与微波源频率计算出朗德g因子。
 
 在稳定存在的物质中，难以找到孤电子。历史上曾通过X射线照射小分子有机物，引起部分分子电离，进而得到孤电子用于测量。在本次实验中，我们使用（1,1-二苯基-2-(1,4,6-三硝基苯基)肼自由基（1,1-Diphenyl-2-picrylhydrazyl radical, DPPH）作为实验材料：DPPH本身是一种相对稳定的自由基，其分子中含有一个未成对电子，能够产生较强的自旋共振信号。
 
@@ -86,14 +86,14 @@ h \nu  = \Delta E = g \mu_B B
 
 所使用波导管为BJ-100型矩形波导，其宽度$a=22.86\pm0.07$ \si{\milli\meter}，对应主模频率区间为$8.20 \approx 12.50$ \si{\giga\hertz}。
 
-综合微波源以及波导管特性，选取微波频率为$\nu  = 8.960 \pm 0.005$ \si{\giga\hertz}，设定输出后通过直读式，对应计算得到波长$\lambda$以及波导波长$\lambda_g$：
+综合微波源以及波导管特性，选取微波源输出频率在$9$\si{\giga\hertz}附件，设定输出后借助直读式频率计读出$\nu  = 8.960 \pm 0.005$ \si{\giga\hertz}，对应计算得到波长$\lambda$以及波导波长$\lambda_g$：
 
 \begin{equation}
 \lambda = \frac{c}{\nu} = 
 \end{equation}
 
 \begin{equation}
-\lambda_g = \frac{\lambda}{\sqrt{1 - \left(\frac{\lambda}{\2a}\right)^2}} = 
+\lambda_g = \frac{\lambda}{\sqrt{1 - \left(\frac{\lambda}{2a}\right)^2}} = 
 \end{equation}
 
 在反射式谐振腔中，为使样品的自旋共振信号最大，应当使谐振腔内电磁场形成驻波，且样品应放置在腔内驻波磁感应强度幅值最大处。谐振腔长$L$，样品与谐振腔端面距离$d$和波导波长$\lambda_g$满足以下关系：
@@ -123,31 +123,31 @@ d = \frac{(m)}{2}\lambda_g \quad (m \in \mathbb{Z})
 在铁磁体系中，弛豫现象较之于电子自旋共振更为显著。为描述顺磁系统的宏观磁矩进动以及弛豫现象，通常使用Bloch方程描述宏观磁化矢量$\mathbf{M}$的时间演化：
 
 \begin{equation}
-\begin{align}
+\begin{aligned}
     \frac{\d M_x}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_x - \frac{M_x}{T_2} \\
     \frac{\d M_y}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_y - \frac{M_y}{T_2} \\
     \frac{\d M_z}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_z - \frac{M_z - M_z^0}{T_1}
-\end{align}
+\end{aligned}
 \end{equation}
 
 其中已选取坐标轴使得外加磁场$\mathbf{B}$沿$z$轴方向，$\mathbf{B'}$为外加的交变磁场$T_1$和$T_2$分别为纵向弛豫时间和横向弛豫时间，分别对应自旋-晶格相互作用和自旋-自旋相互作用。
 
-类似于电子自旋共振，铁磁自旋共振也会在外加磁场强度满足特定条件时发生共振跃迁，伴随对对应频率电磁波能量的强烈吸收。对于铁磁物质，这一吸收作用还可以通过交变磁场下整体复磁导率来描述：
+类似于电子自旋共振，铁磁自旋共振也会在外加磁感应强度满足特定条件时发生共振跃迁，伴随对对应频率电磁波能量的强烈吸收。对于铁磁物质，这一吸收作用还可以通过交变磁场下整体复磁导率来描述：
 
 \begin{equation}
     \mu^* = \mu' + i\mu''
 \end{equation}
 
-其中$\mu'$对应于其在稳定磁场下的磁导率，$\mu''$对应于交变磁能在铁磁体中耗散的部分。在发生铁磁自旋共振时，$\omega = \frac{g}\mu_B/\hbar B_0$，$\mu''$也会达到极大值，并且在此附近存在一定共振线宽$\Delta B$
+其中$\mu'$对应于其在稳定磁场下的磁导率，$\mu''$对应于交变磁能在铁磁体中耗散的部分。调整外加磁感应强度至发生铁磁自旋共振时，$\omega = \frac{g}{\mu_B\hbar} B_0$，$\mu''$也会达到极大值，且存在一共振展宽$\Delta B$对应于铁磁自旋共振的频宽，由
 
 \section{实验结果与分析}
 
-\subsection{电子Landé g因子计算}
+\subsection{电子朗德g因子计算}
 
 调节扫场幅度，观察到励磁电流为$I_0 = 1.821$\si\ampere 时，示波器上显示的两个脉冲信号中心位置相近，且幅值均较大。结合电磁体特性：$B = 0.0152 \text{\si\tesla} + 0.1632 \text{\si\tesla / \si\ampere} \cdot I$，得到此时样品电子自旋共振条件下的磁感应强度为$B_0 = 0.3123$ \si\tesla。给出g因子测量值：
 
 \begin{equation}
-g = \frac{h \nu}{\mu_B B_0} = \frac{4\pi m_e}{e} = 
+g = \frac{h \nu}{\mu_B B_0} = \frac{4\pi m_e}{e} \frac{\nu}{B_0}= 
 \end{equation}
 
 进行不确定度分析：
