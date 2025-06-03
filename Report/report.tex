@@ -1,4 +1,4 @@
-%!xelatex = 'xelatex --halt-on-error %O %S'
+    %!xelatex = 'xelatex --halt-on-error %O %S'
 
 \documentclass{thuemp}
 \begin{document}
@@ -78,7 +78,7 @@ h \nu  = \Delta E = g \mu_B B
 
 由于产生微波的元件本身频率调节有一定难度，在实验上通过常通过调节外加磁场，并观察微波功率吸收随之发生的变化，以吸收最大时对应的磁感应强度与微波源频率计算出朗德g因子。
 
-在稳定存在的物质中，难以找到孤电子。历史上曾通过X射线照射小分子有机物，引起部分分子电离，进而得到孤电子用于测量。在本次实验中，我们使用（1,1-二苯基-2-(1,4,6-三硝基苯基)肼自由基（1,1-Diphenyl-2-picrylhydrazyl radical, DPPH）作为实验材料：DPPH本身是一种相对稳定的自由基，其分子中含有一个未成对电子，能够产生较强的自旋共振信号。
+在稳定存在的物质中，难以找到孤电子。历史上曾使用X射线照射小分子有机物，引起部分分子电离，进而得到含孤电子体系用于测量。在本次实验中，我们使用1,1-二苯基-2-(1,4,6-三硝基苯基)肼自由基（1,1-Diphenyl-2-picrylhydrazyl radical, DPPH）作为实验材料：DPPH本身是一种相对稳定的自由基，其分子中含有一个未成对电子（如图【】），能够产生较强的自旋共振信号。
 
 在本部分测量中，DPPH样品被置于反射式谐振腔内，其几何尺寸可调，以适应于不同频率的微波信号。
 
@@ -103,7 +103,7 @@ L = \frac{n}{2}\lambda_g \quad (n \in \mathbb{Z}^+)
 \end{equation}
 
 \begin{equation}
-d = \frac{(m)}{2}\lambda_g \quad (m \in \mathbb{Z})
+d = \frac{m}{2}\lambda_g \quad (m \in \mathbb{Z}^+)
 \end{equation}
 
 在本次实验中，选取谐振腔长$L=3\lambda_g\approx$，样品与谐振腔端面距离$d=\frac{3}{2}\lambda_g\approx$。为确认取到谐振腔内驻波磁感应强度幅值最大处，通过反复联合调节样品位置和谐振腔长度，观察，最终得到谐振腔内驻波磁感应强度幅值最大处的样品位置$d \approx 73.4 $\si{\milli\meter}。
@@ -112,7 +112,7 @@ d = \frac{(m)}{2}\lambda_g \quad (m \in \mathbb{Z})
 
 电子自旋共振频宽可能较窄，且晶体检波器-微安表系统对微波功率变化的响应较慢，因此在实验中借助磁共振实验仪的扫场功能，使用示波器确认共振发生所对应的中心频率：在一恒定励磁电流基础上，加一周期变化且幅值较小的周期信号，即“扫场信号”，由此样品电子自旋对磁感应强度变化的响应，会在时域上被展开成一个脉冲信号，显示在示波器上；调节励磁电流中心值$B$，直至这一脉冲信号中心落在示波器屏幕中心位置，此时$B_0$即满足样品电子自旋共振条件。
 
-在本实验中，扫场信号为一锯齿波，因而在一个扫描周期内，会在示波器上显示为两个脉冲信号：第一个脉冲信号对应于扫场信号上升段，第二个脉冲信号对应于扫场信号下降段。判定样品电子自旋共振条件时，实际取两脉冲信号中心值近似相等作为判据。
+在本实验中，扫场信号为一锯齿波（如图【】），因而在一个扫描周期内，会在示波器上显示为两个脉冲信号：第一个脉冲信号对应于扫场信号上升段，第二个脉冲信号对应于扫场信号下降段。判定样品电子自旋共振条件时，实际取两脉冲信号中心值近似相等作为判据。
 
 \subsection{铁磁自旋共振}
 
@@ -124,35 +124,46 @@ d = \frac{(m)}{2}\lambda_g \quad (m \in \mathbb{Z})
 
 \begin{equation}
 \begin{aligned}
-    \frac{\d M_x}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_x - \frac{M_x}{T_2} \\
-    \frac{\d M_y}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_y - \frac{M_y}{T_2} \\
-    \frac{\d M_z}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_z - \frac{M_z - M_z^0}{T_1}
+    \frac{\d M_x}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_x - \frac{M_x}{\tau_2} \\
+    \frac{\d M_y}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_y - \frac{M_y}{\tau_2} \\
+    \frac{\d M_z}{\d t} &= \gamma (\mathbf{M} \times \mathbf{B'})_z - \frac{M_z - M_z^0}{\tau_1}
 \end{aligned}
 \end{equation}
 
-其中已选取坐标轴使得外加磁场$\mathbf{B}$沿$z$轴方向，$\mathbf{B'}$为外加的交变磁场$T_1$和$T_2$分别为纵向弛豫时间和横向弛豫时间，分别对应自旋-晶格相互作用和自旋-自旋相互作用。
+其中已选取坐标轴使得外加磁场$\mathbf{B}$沿$z$轴方向，$\mathbf{B'}$为外加的交变磁场$\tau_1$和$\tau_2$分别为纵向弛豫时间和横向弛豫时间，分别对应自旋-晶格相互作用和自旋-自旋相互作用。
 
-类似于电子自旋共振，铁磁自旋共振也会在外加磁感应强度满足特定条件时发生共振跃迁，伴随对对应频率电磁波能量的强烈吸收。对于铁磁物质，这一吸收作用还可以通过交变磁场下整体复磁导率来描述：
+类似于电子自旋共振，铁磁自旋共振也会在外加磁感应强度满足特定条件时发生共振跃迁，伴随对对应频率电磁波能量的强烈吸收。对于铁磁物质，这一吸收作用还可以通过交变磁场下整体复磁导率$\tilde\mu $来描述：
 
 \begin{equation}
-    \mu^* = \mu' + i\mu''
+    \tilde\mu = \mu' + i\mu''
 \end{equation}
 
-其中$\mu'$对应于其在稳定磁场下的磁导率，$\mu''$对应于交变磁能在铁磁体中耗散的部分。调整外加磁感应强度至发生铁磁自旋共振时，$\omega = \frac{g}{\mu_B\hbar} B_0$，$\mu''$也会达到极大值，且存在一共振展宽$\Delta B$对应于铁磁自旋共振的频宽，由
+其中$\mu'$对应于其在稳定磁场下的磁导率，$\mu''$对应于交变磁能在铁磁体中耗散的部分。调整外加磁感应强度至发生铁磁自旋共振时，$\omega = \frac{g}{\mu_B\hbar} B_0$，$\mu''$也会达到极大值，且存在一共振展宽$\Delta B$对应于铁磁自旋共振的频宽。在本实验中，我们定义$\mu'' = \frac 1 2 \mu''_{\mathrm{max}}$时对应的磁感应强度间隔$(B_1 - B_2)$作为$\Delta B$。
+
+在一般情况下，$\tau_1 = \tau_2 \approx 2/\gamma \DeltaB$；方便起见将$\tau_1, \tau_2$统称为弛豫时间$\tau$，则应有：
+
+\begin{equation}
+    \tau = \frac{2}{\gamma\Delta B} = \frac{4\pi}{f}\frac{B_0}{\Delta B}
+\end{equation}
+
+\subsubsection{测量系统与样品选择}
+
+在铁磁自旋共振实验中，我们将
 
 \section{实验结果与分析}
 
 \subsection{电子朗德g因子计算}
 
-调节扫场幅度，观察到励磁电流为$I_0 = 1.821$\si\ampere 时，示波器上显示的两个脉冲信号中心位置相近，且幅值均较大。结合电磁体特性：$B = 0.0152 \text{\si\tesla} + 0.1632 \text{\si\tesla / \si\ampere} \cdot I$，得到此时样品电子自旋共振条件下的磁感应强度为$B_0 = 0.3123$ \si\tesla。给出g因子测量值：
+调节励磁电流中心值以及扫场幅度，观察到励磁电流为$I_0 = 1.821$\si\ampere 时，示波器上显示的两个脉冲信号中心位置相近，且幅值均较大。结合电磁体特性：$B = 0.0152 ~\text{\si\tesla} + 0.1632 ~\text{\si\tesla / \si\ampere} \cdot I$，得到此时样品电子自旋共振条件下的磁感应强度为$B_0 = 0.3123$ \si\tesla。给出g因子测量值：
 
 \begin{equation}
 g = \frac{h \nu}{\mu_B B_0} = \frac{4\pi m_e}{e} \frac{\nu}{B_0}= 
 \end{equation}
 
-进行不确定度分析：
+\subsection{电子朗德g因子不确定度分析}
 
-\subsection{不确定度分析}
+
+
 
 提示：扫场
 提示：微波源频率随时间有所漂移，先测信号再测频率
