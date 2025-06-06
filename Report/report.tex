@@ -20,7 +20,7 @@
 
 %%%%%%%%摘要
 \begin{empAbstract}
-
+    本实验利用微波共振技术研究了电子自旋共振(ESR)和铁磁共振(FMR)现象。通过搭建微波系统，分别对DPPH自由基样品和多晶铁氧体在交变磁场中的功率吸收特性进行研究。在DPPH自由基样品中，测得电子$g$因子为$2.049 \pm 0.005$，与公认值$g_e=2.0023$接近；在多晶铁氧体样品中，测得铁磁共振$g$因子为$2.016 \pm 0.008$，线宽$\Delta B = \SI{1.7}{\milli\tesla}$，弛豫时间$\tau \approx \SI{262}{\nano\second}$。实验验证了磁共振条件$h\nu = g\mu_B B$，并比较了洛伦兹线型、高斯线型及水晶球函数对铁磁共振峰的拟合效果。实验结果为研究顺磁以及铁磁性材料对交变电磁场的响应提供了重要参照。
 \end{empAbstract}
 
 %%%%%%%%英文标题、作者、摘要、关键词
@@ -29,7 +29,7 @@
 \KeywordEn{Electron spin resonance, Ferromagnetic resonance, Microwave technology, Sweep field, Landé g-factor}
 
 \begin{empAbstractEn}
-
+    This experiment investigates the phenomena of electron spin resonance (ESR) and ferromagnetic resonance (FMR) using microwave resonance technology. By constructing a microwave system, the power absorption characteristics of these samples in an alternating magnetic field are studied. In the DPPH radical sample, the measured electron g-factor is $2.049 \pm 0.005$, close to the accepted value of $g_e=2.0023$; in the multicrystalline ferrite sample, the measured ferromagnetic resonance g-factor is $2.016 \pm 0.008$, with a linewidth of $\Delta B = \SI{1.7}{\milli\tesla}$ and a relaxation time of $\tau \approx \SI{262}{\nano\second}$. The experiment verifies the magnetic resonance condition $h\nu = g\mu_B B$ and compares the fitting effects of Lorentzian, Gaussian, and Crystall Ball functions on the ferromagnetic resonance peak. The experimental results provide important references for studying the response of paramagnetic and ferromagnetic materials to alternating electromagnetic fields.
 \end{empAbstractEn}
 
 %%%%%%%%首页角注
@@ -74,11 +74,17 @@ h \nu  = \Delta E = g \mu_B B
 
 对于电子自旋共振，朗德$g$因子值接近于2；实验室中电磁铁一般可产生$0.1 ~\text{T} $至$1.0~\text{T}$的磁场，对应于共振频率在数个\si{\giga\hertz}，因而为测量电子自旋共振信号，需要使用微波波段电磁波源，以及波导、谐振腔等微波器件。
 
-在本次实验中，我们使用北京大华DH1121A型3\si{\centi\meter}固态信号源作为微波源，配合BJ-100型波导管等微波器件，以及岩崎（IWATSU）SS-7802A型模拟示波器，对电子自旋共振和铁磁共振现象进行研究。如图【】所示，样品置于谐振腔内，通过一电磁铁提供磁场；微波源输出的微波信号通过隔离期、衰减器、环行器传输至反射式谐振腔，并在与样品相互作用后，再通过环行器以及波导管传输至晶体检波器
+在本次实验中，我们使用北京大华DH1121A型3\si{\centi\meter}固态信号源作为微波源，配合BJ-100型波导管等微波器件，以及岩崎（IWATSU）SS-7802A型模拟示波器，对电子自旋共振和铁磁共振现象进行研究。如图【】所示，样品置于谐振腔内，通过一电磁铁提供磁场；微波源输出的微波信号通过隔离期、衰减器、环行器传输至反射式谐振腔，并在与样品相互作用后，再通过环行器以及波导管传输至晶体检波器，最终形成可读出的线信号。
 
 由于产生微波的元件本身频率调节有一定难度，在实验上通过常通过调节外加磁场，并观察微波功率吸收随之发生的变化，以吸收最大时对应的磁感应强度与微波源频率计算出朗德$g$因子。
 
-在常温常压下稳定存在的物质中，电子通常以自旋相反的电子对存在，难以产生自旋共振信号。历史上曾使用X射线照射小分子有机物，引起部分分子电离，进而得到含孤电子体系用于测量。在本次实验中，我们使用1,1-二苯基-2-(1,4,6-三硝基苯基)肼自由基（1,1-Diphenyl-2-picrylhydrazyl radical, DPPH）作为实验材料：DPPH本身是一种相对稳定的自由基，其分子中含有一个未成对电子（如图【】），能够产生较强的自旋共振信号。
+在常见化合物中，电子通常以自旋相反的电子对存在，难以产生自旋共振信号。历史上曾使用X射线照射小分子有机物，引起部分分子电离，进而得到含孤电子体系用于测量。在本次实验中，我们使用1,1-二苯基-2-(1,4,6-三硝基苯基)肼自由基（1,1-Diphenyl-2-picrylhydrazyl radical, DPPH）作为实验材料：DPPH本身是一种相对稳定的自由基，其分子中含有一个未成对电子（如\ref{fig:DPPH}），能够产生较强的自旋共振信号。\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{./DPPH_molecule.png}
+    \caption{DPPH分子结构示意图} \label{fig:DPPH}
+\end{figure}
 
 在本部分测量中，DPPH样品被置于反射式谐振腔内，其几何尺寸可调，以适应于不同频率的微波信号。
 
@@ -89,11 +95,11 @@ h \nu  = \Delta E = g \mu_B B
 综合微波源以及波导管特性，选取微波源输出频率在$9~\text{GHz}$附近，设定输出后借助直读式频率计读出$\nu  = 8.960 \pm 0.005$ \si{\giga\hertz}，对应计算得到波长$\lambda$以及波导波长$\lambda_g$：
 
 \begin{equation}
-\lambda = \frac{c}{\nu} = 
+\lambda = \frac{c}{\nu} = 33.46 ~\text{mm}
 \end{equation}
 
 \begin{equation}
-\lambda_g = \frac{\lambda}{\sqrt{1 - \left(\frac{\lambda}{2a}\right)^2}} = 
+\lambda_g = \frac{\lambda}{\sqrt{1 - \left(\frac{\lambda}{2a}\right)^2}} = 49.10 ~\text{mm}
 \end{equation}
 
 在反射式谐振腔中，为使样品的自旋共振信号最大，应当使谐振腔内电磁场形成驻波，且样品应放置在腔内驻波磁感应强度幅值最大处。谐振腔长$L$，样品与谐振腔端面距离$d$和波导波长$\lambda_g$满足以下关系：
@@ -112,7 +118,7 @@ d = \frac{m}{2}\lambda_g \quad (m \in \mathbb{Z}^+)
 
 电子自旋共振频宽可能较窄，且晶体检波器-微安表系统对微波功率变化的响应较慢，因此在实验中借助磁共振实验仪的扫场功能，使用示波器确认共振发生所对应的中心频率：在一恒定励磁电流基础上，加一周期变化且幅值较小的周期信号，即“扫场信号”，由此样品电子自旋对磁感应强度变化的响应，会在时域上被展开成一个脉冲信号，显示在示波器上；调节励磁电流中心值$B$，直至这一脉冲信号中心落在示波器屏幕中心位置，此时$B_0$即满足样品电子自旋共振条件。
 
-在本实验中，扫场信号为一锯齿波（如图【】），因而在一个扫描周期内，会在示波器上显示为两个脉冲信号：第一个脉冲信号对应于扫场信号上升段，第二个脉冲信号对应于扫场信号下降段。判定样品电子自旋共振条件时，实际取两脉冲信号中心值近似相等作为判据。
+在本实验中，扫场信号为一锯齿波，因而在一个扫描周期内，会在示波器上将显示两个脉冲信号：第一个脉冲信号对应于扫场信号上升段，第二个脉冲信号对应于扫场信号下降段。判定样品电子自旋共振条件时，实际取两脉冲信号中心值近似相等作为判据。
 
 \subsection{铁磁共振}
 
@@ -256,6 +262,8 @@ g = \frac{h \nu}{\mu_B B_0} = \frac{4\pi m_e}{e} \frac{\nu}{B_0}\approx 2.016
 
 \section{结论}
 
+本实验通过微波电子自旋共振和铁磁共振现象的研究，成功测量了DPPH自由基样品的电子$g$因子为$2.049 \pm 0.005$，与自由电子的公认值$g_e=2.0023$接近而仍有一定偏差，提示其为顺磁中心而同时受到了分子内其他电子的作用，展示了微波电磁自旋共振方法在化学中物质结构分析领域的重要价值；对多晶铁氧体样品测得铁磁共振$g$因子为$2.016 \pm 0.008$，线宽$\Delta B = \SI{1.7}{\milli\tesla}$，弛豫时间$\tau \approx \SI{262}{\nano\second}$。实验验证了磁共振条件$h\nu = g\mu_B B$，并比较了洛伦兹线型、高斯线型及水晶球函数对铁磁共振峰的拟合效果，确认了洛伦兹线型对铁磁共振的描述最为适宜，且符合其阻尼共振的物理机制。实验结果为研究顺磁以及铁磁性材料对交变电磁场的响应提供了重要参照。
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -282,7 +290,7 @@ g = \frac{h \nu}{\mu_B B_0} = \frac{4\pi m_e}{e} \frac{\nu}{B_0}\approx 2.016
 
 \section{关于未测量电子自旋共振信号与样品位置关联的说明}
 
-
+在部分实验过程中，实验人员尝试通过螺杆调节样品位置，以研究样品位置对电子自旋共振信号的影响。在实验开始阶段，实验人员注意到调节螺杆出现卡阻现象，尝试通过加大调节力度进行克服，随后阻尼感消失，但在测量中发现样品位置与电子自旋共振信号之间关联并不显著。在撤开电磁铁并准备调整微波系统连接方式时，实验人员发现反射式谐振腔的样品位置螺杆与谐振腔连接螺丝之间的塑料连接件已经断裂脱落，推断为在调节样品位置时，螺杆与谐振腔连接螺丝之间的塑料连接件与电磁铁磁极卡阻，进而在后续调节中断裂脱落。由于当时实验室内并无备件，经实验指导教师许可放弃本部分测量。
 
 \section{铁磁共振信号拟合函数的选择}
 

@@ -55,7 +55,7 @@ The LaTeX template for Experiment Report in Modern Physics of Tsinghua Universit
 \usepackage{ccaption}
 \usepackage{float}
 \usepackage{calc}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc, shapes,arrows,positioning}
 \usetikzlibrary{circuits.ee.IEC}
 % 在导言区添加 circuitikz 包
 \usepackage{circuitikz}
