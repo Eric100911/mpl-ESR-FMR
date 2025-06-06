@@ -312,6 +312,40 @@
 
 以上各组合拟合结果如下：
 
+\begin{equation}
+    P(B) =
+    \begin{cases}
+        P_0 + A \exp\left( -\frac{(B - B_0)^2}{2\sigma^2} \right) & \frac{B - B_0}{\sigma} >
+        P_0 + A' \left( C' -\frac{B-B_0}{\sigma} \right)^{-n} & \frac{B - B_0}{\sigma} \leq
+    \end{cases}
+    \label{eq:crystalball}
+\end{equation}
+
+其中
+\begin{equation}
+    \begin{cases}
+        A' = A \left( \frac n {|\alpha|}\right)^n \exp \left(-\frac{|\alpha|^2} 2\right) \\
+    C' = \frac n {|\alpha|} - |\alpha|
+    \end{cases}
+\end{equation}
+
+分别进行拟合，结果如下：
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{../Data/FMR_ConstantBg_GaussPeak.png}
+    \caption{铁磁共振透射功率与外加磁场关系图（高斯型拟合）} \label{fig:FMR_Gauss}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{../Data/FMR_ConstantBg_CrystalBallPeak.png}
+    \caption{铁磁共振透射功率与外加磁场关系图（水晶球函数拟合）} \label{fig:FMR_CrystalBall}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{../Data/FMR_ConstantBg_LorentzPeak.png}
+    \caption{铁磁共振透射功率与外加磁场关系图（洛伦兹型拟合）} \label{fig:FMR_Lorentz}
+\end{figure}
+
 
 其中，水晶球函数虽然拟合描述最好，但是总共使用6个拟合参数，数量过多，存在潜在的过拟合风险。结合曲线符合程度，选择使用洛伦兹型峰描述共振信号。
 
